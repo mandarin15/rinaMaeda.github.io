@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+main {
+    padding-top: 92px;
+}
+
+.main_img img {
+    margin: auto 0;
+    width: 100%;
+}
+
+.text {
+    margin: 80px;
+}
+
+.project {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+}
+
+.date dt {
+    width: 25%;
+}
+
+.date dd {
+    width: 75%;
+}
+
+.sub_img {
+    padding: 0 25px;
+}
+.sub_img img {
+    width: 100%;
+}
+
+/*  カルーセル */
+
+.pages {
+    width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.pages ul {
+    display: flex;
+    flex-direction: row-reverse;
+    transition: transform .3s;
+}
+
+.pages li {
+    min-width: 100%;
+}
+
+.pages li img {
+    width: 100%;
+}
+
+
+
+#prev:hover,
+#next:hover {
+    opacity: .7;
+}
+
+
+#prev,
+#next {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 5%;
+    cursor: pointer;
+}
+
+#prev {
+    right: 0;
+}
+
+#next {
+    left: 0;
+}
+
+.btn_prev,
+.btn_next {
+    position: absolute;
+    top: 48%;
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg);
+}
+
+.btn_prev {
+    right: 24px;
+    border-top: solid 1px #523500;
+    border-right: solid 1px #523500;
+}
+
+.btn_next {
+    left: 24px;
+    border-bottom: solid 1px #523500;
+    border-left: solid 1px #523500;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------ */
+
+.credit {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+
+.credit h3 {
+    width: 15%;
+    display: block;
+    font-size: 1.2em;
+}
+
+.credit dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+}
+
+.credit dt {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.credit dd {
+    width: 80%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    main {
+        padding-top: 62px;
+    }
+
+}

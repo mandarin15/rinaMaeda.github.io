@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+* {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Mukta', sans-serif, "Hiragino Kaku Gothic ProN", Arial, "メイリオ";
+    font-weight: 300;
+    color: #000000;
+    background-color: #ebebeb;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+.top {
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 1px #000000;
+    padding-top: 25px;
+    background-color: #ebebeb;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.top h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.sp-menu #open {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/* pc-nav */
+.pc-nav {
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pc-nav ul {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 25px;
+    padding-left: 0;
+}
+.pc-nav li {
+    margin-right: 25px;
+    font-size: 2rem;
+}
+.pc-nav .right li {
+    font-size: 1.4rem;
+    padding-top: 15px;
+}
+.pc-nav .right {
+    opacity: 0;
+}
+.pc-nav .right.show {
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: transform .2s;
+    display: flex;
+}
+
+
+
+.card-title {
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.card-body {
+    margin-bottom: 15px;
+}
+
+/* フィルタリング */
+#projectConents.hide {
+    display: none;
+}
+
+
+/* footer */
+footer {
+    border-top: solid 1px #000000;
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+    padding: 0px 50px 10px 25px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        display: flex;
+        padding-top: 20px;
+    }
+
+    .top h1 {
+        padding: 0px 20px 10px 20px;
+        text-align: left;
+    }
+    .top p {
+        margin-top: 5px;
+        font-size: 0.9em;
+    }
+    /* ハンバーガーメニュー */
+    .sp-menu #open {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .sp-menu #open.hide {
+        display: none;
+    }
+    
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #d86800e0;
+        color: #fff;
+        text-align: right;
+        padding: 100px 40px 0 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s;
+    } 
+
+    .overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    .overlay #close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        font-size: 36px;
+        cursor: pointer;
+    }
+
+    .overlay .sp-nav a {
+        font-size: 30px;
+        color: #fff;
+        line-height: 52px;
+    }
+
+    .overlay .about {
+        border-top: solid 1px #fff;
+        margin-left: 280px;
+        padding-top: 15px;
+    }
+
+
+    .pc-menu {
+        display: none;
+    }
+
+    main {
+        padding-top: 62px;
+    }
+    .card-body {
+        padding-top: 12px;
+        margin-bottom: 5px;
+    }
+    .card-text {
+        font-size: 0.9em;
+    }
+
+}
